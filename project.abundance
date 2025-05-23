@@ -14,7 +14,12 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1748033318403,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1748034912674
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -503,6 +508,13 @@
             "ap2Primary": false,
             "ap1ID": 1748034842261,
             "ap2ID": 1748034912674
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1748034912674,
+            "ap2ID": 1748033318403
         }
     ],
     "unitsKey": "MM",
