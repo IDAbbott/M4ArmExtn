@@ -84,8 +84,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.10112359550561797,
-            "y": 0.7325349301397205,
+            "x": 0.10580524344569289,
+            "y": 0.7305389221556886,
             "uniqueID": 1748033567917,
             "ioValues": [
                 {
@@ -112,6 +112,138 @@
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.38951310861423216,
+            "y": 0.626746506986028,
+            "uniqueID": 1748033665299,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1748033497857
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1748033590513
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.4794007490636704,
+            "y": 0.6307385229540918,
+            "uniqueID": 1748033684314,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748033665299
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 90
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.10580524344569289,
+            "y": 0.8582834331337326,
+            "uniqueID": 1748033789121,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 40
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 40
+                }
+            ],
+            "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.21816479400749061,
+            "y": 0.8582834331337326,
+            "uniqueID": 1748033810972,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748033789121
+                },
+                {
+                    "name": "height",
+                    "ioValue": 12
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.3848314606741573,
+            "y": 0.7664670658682635,
+            "uniqueID": 1748033897974,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748033810972
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.3838951310861423,
+            "y": 0.8902195608782435,
+            "uniqueID": 1748033905603,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1748033810972
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -131,10 +263,52 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1748033497857,
+            "ap2ID": 1748033665299
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1748033567917,
             "ap2ID": 1748033590513
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
+            "ap1ID": 1748033590513,
+            "ap2ID": 1748033665299
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748033665299,
+            "ap2ID": 1748033684314
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748033789121,
+            "ap2ID": 1748033810972
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748033810972,
+            "ap2ID": 1748033897974
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1748033810972,
+            "ap2ID": 1748033905603
         }
     ],
     "unitsKey": "MM",
